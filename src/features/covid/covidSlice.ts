@@ -50,7 +50,7 @@ const initialState:covidState = {
             },
             "lastUpdate": "2021-10-28T03:22:36.000Z"
     },
-    country: "",
+    country: "japan",
     dailyData:[
         {
           "totalConfirmed": 557,
