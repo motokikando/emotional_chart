@@ -60,12 +60,6 @@ const Cards:React.FC = () => {
             Dead persons
           </Typography>
           <Typography variant="h5">
-            {/* <CountUp
-              start={0}
-              end={data.deaths.value}
-              duration={1.5}
-              separator=","
-            /> */}
             {data.deaths.value}
           </Typography>
         </CardContent>
