@@ -24,15 +24,9 @@ const Cards:React.FC = () => {
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             <MdLocalHospital />
-            Infected persons
+            Positive
           </Typography>
           <Typography variant="h5">
-            {/* <CountUp
-              start={0}
-              end={data.confirmed.value}
-              duration={1.5}
-              separator=","
-            /> */}
             {data.confirmed.value}
           </Typography>
         </CardContent>
@@ -40,15 +34,9 @@ const Cards:React.FC = () => {
       <Grid item xs={12} md={3} component={Card} className={styles.recovered}>
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
-            <AiFillLike /> Recovered persons
+            <AiFillLike /> Mixed
           </Typography>
           <Typography variant="h5">
-            {/* <CountUp
-              start={0}
-              end={data.recovered.value}
-              duration={1.5}
-              separator=","
-            /> */}
             {data.recovered.value}
           </Typography>
         </CardContent>
@@ -57,7 +45,7 @@ const Cards:React.FC = () => {
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             <GiHastyGrave />
-            Dead persons
+            Negative
           </Typography>
           <Typography variant="h5">
             {data.deaths.value}

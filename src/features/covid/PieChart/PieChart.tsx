@@ -15,18 +15,18 @@ const PieChart = () => {
         const pieChart = data && (
             <Doughnut
               data={{
-                labels: ["Infected", "Recovered", "Deaths"],
+                labels: ["Positive", "Negatibe", "Neutral"],
                 datasets: [
                   {
                     data: [
-                      data.confirmed.value,
-                      data.recovered.value,
-                      data.deaths.value,
+                      40,
+                      50,
+                      10,
                     ],
                     backgroundColor: [
+                      "rgba(255,140,0, 0.5)",
                       "rgba(0, 0, 255, 0.5)",
                       "#008080",
-                      "rgba(255, 0, 0, 0.5)",
                     ],
                     hoverBackgroundColor: ["#36A2EB", "#3cb371", "#FF6384"],
                     borderColor: ["transparent", "transparent", "transparent"],
@@ -48,7 +48,7 @@ const PieChart = () => {
         <>
       {data.confirmed && (
         <Typography align="center" color="textSecondary" gutterBottom>
-          Motarity {data.confirmed && motality.toFixed(2)} [%]
+           {data.confirmed && motality.toFixed(2)} [%]
         </Typography>
       )}
       {pieChart}

@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Container, Grid } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-
 import { fetchAsyncGet, fetchAsyncGetDaily, selectData } from "../covidSlice";
 import Cards from "../Cards/Cards";
 import Chart from "../Chart/Chart";
@@ -37,7 +36,7 @@ const DashBoard: React.FC = () => {
       <AppBar position="absolute">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Covid 19 Live Dashboard
+            Sentiment Analysis Dashboard
           </Typography>
           {data && <Typography variant="body1">{new Date(data.lastUpdate).toDateString()}</Typography>}
         </Toolbar>

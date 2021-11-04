@@ -47,7 +47,7 @@ const SwitchCountry:React.FC = () => {
           dispatch(fetchAsyncGetCountry(e.target.value))
         }
       >
-        <option value="">Worldwide</option>
+        <option value="">Sentiment Chart</option>
         {countries.map((country, i) => (
           <option key={i} value={country}>
             {country}
