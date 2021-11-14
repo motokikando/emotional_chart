@@ -36,7 +36,7 @@ const DashBoard: React.FC = () => {
       <AppBar position="absolute">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Sentiment Analysis Dashboard
+            Twitter感情分析ダッシュボード
           </Typography>
           {data && <Typography variant="body1">{new Date(data.lastUpdate).toDateString()}</Typography>}
         </Toolbar>
