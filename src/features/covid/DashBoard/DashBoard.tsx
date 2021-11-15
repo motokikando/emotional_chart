@@ -10,6 +10,7 @@ import Chart from "../Chart/Chart";
 import PieChart from "../PieChart/PieChart";
 import SwithCountry from "../SwitchCountry/SwitchCountry";
 import SearchField from "../SwitchCountry/Search";
+import ModalText from "../Modal/Modal";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -59,6 +60,7 @@ const DashBoard: React.FC = () => {
 
           <Grid item xs={12} md={5}>
             <PieChart />
+            <ModalText/>
           </Grid>
 
           <Grid item xs={12} md={12}>
