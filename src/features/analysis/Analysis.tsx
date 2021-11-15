@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import styles from "./Analysis.module.css";
 import { makeStyles, Button, Theme } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
@@ -17,19 +17,22 @@ const useStyles = makeStyles((theme: Theme) => ({
   button: {
     margin: theme.spacing(3),
   },
+  textfield: {
+    background: "rgba( 255, 255, 255, 0.8 )",
+  },
 }));
 
 const Analysis: React.FC = () => {
   const classes = useStyles();
   //   const dispatch: AppDispatch = useDispatch();
   //   const isLoginView = useSelector(selectIsLoginView);
-  const [credential, setCredential] = useState({ username: "", password: "" });
+  // const [credential, setCredential] = useState({ username: "", password: "" });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    const name = e.target.name;
-    setCredential({ ...credential, [name]: value });
-  };
+  // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const value = e.target.value;
+  //   const name = e.target.name;
+  //   setCredential({ ...credential, [name]: value });
+  // };
 
   //ログイン処理
   //   const login = async () => {
@@ -50,11 +53,13 @@ const Analysis: React.FC = () => {
         <img src="home_1.jpg" alt="" className={styles.image} />
 
         <div className={styles.content}>
-          <h1>Twitter感情分析アプリ</h1>
+          <h1>感情分析アプリ</h1>
 
           {/* <h1>{isLoginView ? "Login" : "Register"}</h1> */}
           <br />
-          <TextField
+          <TextField id="filled-basic" label="twitter_id" variant="filled" className={classes.textfield} />
+
+          {/* <TextField
             InputLabelProps={{
               shrink: true,
             }}
@@ -63,11 +68,19 @@ const Analysis: React.FC = () => {
             name="username"
             value={credential.username}
             onChange={handleInputChange}
-          />
+            className={classes.textfield} */}
+          {/* /> */}
           <br />
-          <Button variant="contained" color="primary" size="small" className={classes.button} component={Link} to="/dash">
+          <Button
+            variant="contained"
+            color="primary"
+            size="medium"
+            className={classes.button}
+            component={Link}
+            to="/dash"
+          >
             START
-        </Button>
+          </Button>
 
           {/* <span onClick={() => dispatch(toggleMode())}>
           {isLoginView ? "Create new account ?" : "Back to Login"}

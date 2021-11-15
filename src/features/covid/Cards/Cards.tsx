@@ -34,7 +34,7 @@ const Cards:React.FC = () => {
       <Grid item xs={12} md={3} component={Card} className={styles.recovered}>
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
-            <AiFillLike /> Mixed
+            <AiFillLike /> Negative
           </Typography>
           <Typography variant="h5">
             {data.recovered.value}
@@ -45,7 +45,7 @@ const Cards:React.FC = () => {
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             <GiHastyGrave />
-            Negative
+           
           </Typography>
           <Typography variant="h5">
             {data.deaths.value}
