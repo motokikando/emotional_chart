@@ -51,8 +51,9 @@ const ModalText: React.FC = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            最近調子いいじゃん！
+            今日も1日がんばりましょう！
           </Typography>
+          "今日からキミは富士山だ！by 松岡修造" 
           {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography> */}
