@@ -53,7 +53,7 @@ const Analysis: React.FC = () => {
         <img src="home_1.jpg" alt="" className={styles.image} />
 
         <div className={styles.content}>
-          <h1>感情分析アプリ</h1>
+          <h1>Emotify</h1>
 
           {/* <h1>{isLoginView ? "Login" : "Register"}</h1> */}
           <br />

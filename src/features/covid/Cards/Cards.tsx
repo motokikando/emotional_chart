@@ -4,18 +4,17 @@ import React from "react";
 import styles from "./Cards.module.css";
 //material-ui import
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-
+import ModalText from "../Modal/Modal";
 //Reactのアイコン
-import { GiHastyGrave } from "react-icons/gi";
 import { MdLocalHospital } from "react-icons/md";
 import { AiFillLike } from "react-icons/ai";
 //dataのstateの取得したい
-import { useSelector } from "react-redux";
-import { selectData } from "../covidSlice";
+// import { useSelector } from "react-redux";
+// import { selectData } from "../covidSlice";
 
 const Cards:React.FC = () => {
   //dataの値を読み取り
-  const data = useSelector(selectData)
+  // const data = useSelector(selectData)
 
   return (
     <div className={styles.container}>
@@ -27,7 +26,8 @@ const Cards:React.FC = () => {
             Positive
           </Typography>
           <Typography variant="h5">
-            {data.confirmed.value}
+            {/* {data.confirmed.value} */}
+            96.31%
           </Typography>
         </CardContent>
       </Grid>
@@ -37,18 +37,19 @@ const Cards:React.FC = () => {
             <AiFillLike /> Negative
           </Typography>
           <Typography variant="h5">
-            {data.recovered.value}
+            {/* {data.recovered.value} */}
+            9.07%
           </Typography>
         </CardContent>
       </Grid>
       <Grid item xs={12} md={3} component={Card} className={styles.deaths}>
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
-            <GiHastyGrave />
-           
+
           </Typography>
-          <Typography variant="h5">
-            {data.deaths.value}
+          <Typography variant="h4">
+            {/* {data.deaths.value} */}
+            <ModalText/>
           </Typography>
         </CardContent>
       </Grid>

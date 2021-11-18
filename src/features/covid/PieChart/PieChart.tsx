@@ -9,37 +9,53 @@ import { selectData } from "../covidSlice";
 
 const PieChart = () => {
     const data = useSelector(selectData);
-    const motality =
-        data.confirmed && (100 * data.deaths.value) / data.confirmed.value;
+    // const motality =
+    //     data.confirmed && (100 * data.deaths.value) / data.confirmed.value;
 
         const pieChart = data && (
             <Doughnut
               data={{
-                labels: ["Positive", "Negatibe", "Neutral"],
+                labels: ["喜び", "嫌", "好き", "安心", "驚き"],
                 datasets: [
                   {
                     data: [
-                      40,
-                      50,
-                      10,
+                      38.5,
+                      23.1,
+                      15.4,
+                      15.4,
+                      7.7,
                     ],
-                    backgroundColor: [
-                      "rgba(255,140,0, 0.5)",
-                      "rgba(0, 0, 255, 0.5)",
-                      "#008080",
-                    ],
-                    hoverBackgroundColor: ["#36A2EB", "#3cb371", "#FF6384"],
-                    borderColor: ["transparent", "transparent", "transparent"],
+
+                    backgroundColor: ["#ffa500", "rgba(0, 0, 255, 0.5)", "#ff6347", "#7cfc00", "#ffa07a"],
+                    borderColor: ["transparent", "transparent", "transparent", "transparent", "transparent" ],
                   },
                 ],
               }}
               options={{
                 legend: {
+                  display: true,
+
                   position: "bottom",
                   labels: {
                     boxWidth: 15,
                   },
                 },
+                plugins: {
+                  datalabels: {
+                      align: "end",
+                      anchor: "end",
+                      offset: -100,
+                      color: "#000",
+                      font: {
+                          weight: "bold",
+                          size: 20,
+                      },
+                      // formatter: (value, ctx) => {
+                      //     let label = ctx.chart.data.labels[ctx.dataIndex];
+                      //     return label + '\n' + value + '%';
+                      // },
+                  }
+              },
               }}
             />
           );
@@ -48,7 +64,8 @@ const PieChart = () => {
         <>
       {data.confirmed && (
         <Typography align="center" color="textSecondary" gutterBottom>
-           {data.confirmed && motality.toFixed(2)} [%]
+           {/* {data.confirmed && motality.toFixed(2)} [%] */}
+           感情分類
         </Typography>
       )}
       {pieChart}
