@@ -56,6 +56,7 @@ const DashBoard: React.FC = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} md={7}>
             <Chart />
+            
           </Grid>
 
           <Grid item xs={12} md={5}>
